@@ -1,0 +1,27 @@
+<div class="container" style="margin:100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Agregar un Comentario</h4>
+            <form action="/comentarios/agregar" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre" name="usuario">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" name="puntuacion" class="form-control" placeholder="Puntuacion"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea type="text" name="comentario" class="form-control" placeholder="Comentario"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Imagen: <input type="file" name="imagen" id="imagen"></label>
+                </div>
+                <input type="hidden" name="img_id">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{#if error}}
+<h5>{{message}}</h5>
+{{/if}}
